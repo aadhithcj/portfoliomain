@@ -228,7 +228,7 @@ function About() {
           <HandNote
             flip
             rotate={5}
-            className="absolute left-[calc(73%+120px)] top-36 hidden w-36 xl:block"
+            className="absolute left-[calc(73%+120px)] top-36 hidden w-36 [@media(min-width:1280px)_and_(any-pointer:fine)]:block"
           >
             drag it. click it.
           </HandNote>
@@ -272,8 +272,8 @@ function About() {
               ))}
             </div>
 
-            {/* Below desktop the hanging card is off; a compact ID strip stands in */}
-            <div className="mt-6 lg:hidden">
+            {/* Wherever the hanging card is off (phones, tablets, touch screens), a compact ID strip stands in */}
+            <div className="mt-6 [@media(min-width:1024px)_and_(any-pointer:fine)]:hidden">
               <IdStrip />
             </div>
           </div>
